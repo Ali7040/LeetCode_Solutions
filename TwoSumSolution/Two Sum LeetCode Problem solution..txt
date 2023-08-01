@@ -1,0 +1,19 @@
+Two Sum LeetCode Problem solution.
+ 
+Dry run:
+
+Initialize the input nums = [2, 7, 11, 15] and target = 9.
+Create an empty unordered_map numIndexMap to store the numbers and their indices.
+Initialize the loop: i = 0, nums[i] = 2.
+Calculate the complement: complement = target - nums[i] = 9 - 2 = 7.
+Check if complement (7) is present in the numIndexMap. It's not there.
+Add nums[i] (2) and its index i (0) to the numIndexMap: numIndexMap[2] = 0.
+Increment i to 1 and repeat the process: nums[i] = 7.
+Calculate the complement: complement = target - nums[i] = 9 - 7 = 2.
+Check if complement (2) is present in the numIndexMap. It is there, and its value is 0.
+Return the indices of the two numbers whose sum equals the target: return {numIndexMap[complement], i} = {0, 1}.
+The function ends, and the result [0, 1] is returned as the output.
+
+Explanation:
+The function iterates through the nums vector, calculates the complement for each number, and checks if the complement exists in the numIndexMap. If the complement is found, it means we have found two numbers whose sum equals the target, and their indices are returned as the result. In the example provided, the function correctly returns [0, 1] since 2 + 7 = 9.
+
